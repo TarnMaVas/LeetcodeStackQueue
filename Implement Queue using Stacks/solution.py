@@ -47,7 +47,7 @@ class Stack:
         Get the top-most value of the stack
         and delete it.
         '''
-        if not self.head:
+        if self.head is None:
             return None
 
         value = self.head.data
@@ -72,7 +72,7 @@ class Stack:
         '''
         Check if the stack is empty.
         '''
-        return not bool(len(self))
+        return self.head is None
 
 
 class MyQueue:
